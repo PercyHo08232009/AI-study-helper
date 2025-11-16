@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Study Helper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon.png" alt="logo" class="logo" />
+      <h1>AI Study Helper</h1>
+    </header>
+
+    <div class="controls">
+      <button id="summarizeBtn">Summarize Page</button>
+      <button id="questionsBtn">Generate Questions</button>
+      <button id="flashcardsBtn">Make Flashcards</button>
+      <button id="vocabBtn">Extract Vocab</button>
+    </div>
+
+    <div id="status">Ready</div>
+
+    <div id="output" class="output"></div>
+
+    <footer class="small">
+      <label>
+        API Mode:
+        <select id="apiModeSelect">
+          <option value="proxy" selected>Proxy (recommended)</option>
+          <option value="direct">Direct (unsafe)</option>
+        </select>
+      </label>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
