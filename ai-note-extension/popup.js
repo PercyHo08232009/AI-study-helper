@@ -54,7 +54,7 @@ async function aiRequest(prompt) {
   output.innerText = '...';
 
   const payload = {
-    model: 'nvidia/nemotron-nano-9b-v2:free', // placeholder — proxy will reformat for OpenRouter; or choose a model supported by OpenRouter
+    model: 'openai/gpt-oss-20b:free', // placeholder — proxy will reformat for OpenRouter; or choose a model supported by OpenRouter
     messages: [
       { role: 'system', content: 'You are a concise helpful assistant that summarizes text or generates study materials.' },
       { role: 'user', content: prompt }
@@ -130,3 +130,4 @@ summarizeBtn.addEventListener('click', handleSummarize);
 questionsBtn.addEventListener('click', handleQuestions);
 flashcardsBtn.addEventListener('click', handleFlashcards);
 vocabBtn.addEventListener('click', handleVocab);
+
