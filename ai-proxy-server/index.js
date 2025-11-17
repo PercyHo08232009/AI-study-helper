@@ -34,7 +34,7 @@ app.post('/openrouter', async (req, res) => {
     // Build OpenRouter-compatible request.
     // OpenRouter's chat completions endpoint expects: model & messages (like OpenAI)
     const orBody = {
-      model: body.model || 'kwaipilot/kat-coder-pro:free', // choose a model that OpenRouter supports
+      model: body.model || 'openai/gpt-oss-20b:free', // choose a model that OpenRouter supports
       messages: body.messages || [],
       max_tokens: body.max_tokens || 600
     };
@@ -58,3 +58,4 @@ app.post('/openrouter', async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`OpenRouter proxy listening at http://localhost:${port}`));
+
